@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3307/test
+    username: test
+    password: test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+  application:
+    name: demo
+  flyway:
+    enabled: false
+logging:
+  path: /Users/jingxuan/log

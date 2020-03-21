@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+  cluster:
+    name: jingxuan
+  application:
+    name: demo
+  flyway:
+    enabled: true
+    table: flyway_schema_history
+    locations: classpath:db/migration
+    schemas: test,flyway
+mybatis:
+  type-aliases-package: com.jingxuan.demo.model
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  path: /Users/jingxuan/log
